@@ -1041,6 +1041,42 @@ body {
     line-height: 1.7;
 }
 
+.live-link-footer {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(16, 185, 129, 0.2);
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin: 15px 0;
+    border-left: 3px solid #10b981;
+}
+
+.live-link-footer i {
+    color: #10b981;
+    font-size: 14px;
+}
+
+.live-link-footer span {
+    font-weight: 600;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.live-link-footer a {
+    color: var(--white);
+    font-weight: 700;
+    font-size: 13px;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.live-link-footer a:hover {
+    border-bottom-color: #10b981;
+    color: #10b981;
+}
+
 .social-links {
     display: flex;
     gap: 15px;

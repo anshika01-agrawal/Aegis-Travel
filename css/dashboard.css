@@ -1005,6 +1005,248 @@ input:checked + .slider:before {
     color: var(--danger);
 }
 
+/* ===================================
+   MAP FULL SECTION
+   =================================== */
+
+.map-full-section .card {
+    margin-bottom: 0;
+}
+
+.map-legend {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.map-legend span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* ===================================
+   INCIDENTS SECTION
+   =================================== */
+
+.incidents-grid {
+    display: grid;
+    gap: 30px;
+}
+
+.incidents-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.incident-card {
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 4px solid var(--primary);
+    background: var(--white);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.incident-card.critical {
+    border-left-color: var(--danger);
+    background: linear-gradient(to right, rgba(239, 68, 68, 0.05), var(--white));
+}
+
+.incident-card.high {
+    border-left-color: var(--warning);
+    background: linear-gradient(to right, rgba(245, 158, 11, 0.05), var(--white));
+}
+
+.incident-card.medium {
+    border-left-color: var(--success);
+    background: linear-gradient(to right, rgba(16, 185, 129, 0.05), var(--white));
+}
+
+.incident-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.incident-id {
+    font-weight: 700;
+    color: var(--gray-700);
+    font-size: 14px;
+}
+
+.incident-status {
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.incident-status.critical {
+    background: var(--danger);
+    color: white;
+}
+
+.incident-status.high {
+    background: var(--warning);
+    color: white;
+}
+
+.incident-status.resolved {
+    background: var(--success);
+    color: white;
+}
+
+.incident-card h3 {
+    margin-bottom: 15px;
+    color: var(--dark);
+    font-size: 18px;
+}
+
+.incident-card p {
+    margin-bottom: 8px;
+    color: var(--gray-600);
+    font-size: 14px;
+}
+
+.incident-card p i {
+    width: 20px;
+    color: var(--primary);
+}
+
+.incident-actions {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.btn-secondary {
+    padding: 8px 20px;
+    background: var(--gray-200);
+    color: var(--gray-700);
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background: var(--gray-300);
+}
+
+.filter-select {
+    padding: 8px 15px;
+    border: 1px solid var(--gray-300);
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* ===================================
+   E-FIR SECTION
+   =================================== */
+
+.efir-grid {
+    display: grid;
+    gap: 30px;
+}
+
+.efir-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.efir-table thead {
+    background: var(--gray-100);
+}
+
+.efir-table th {
+    padding: 15px;
+    text-align: left;
+    font-weight: 600;
+    color: var(--gray-700);
+    font-size: 14px;
+}
+
+.efir-table td {
+    padding: 15px;
+    border-bottom: 1px solid var(--gray-200);
+}
+
+.efir-table tr:last-child td {
+    border-bottom: none;
+}
+
+.status-badge.pending {
+    background: rgba(245, 158, 11, 0.1);
+    color: var(--warning);
+}
+
+.status-badge.warning {
+    background: rgba(239, 68, 68, 0.1);
+    color: var(--danger);
+}
+
+.status-badge.success {
+    background: rgba(16, 185, 129, 0.1);
+    color: var(--success);
+}
+
+/* ===================================
+   ANALYTICS SECTION
+   =================================== */
+
+.analytics-dashboard {
+    display: grid;
+    gap: 30px;
+}
+
+.stat-change {
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 5px;
+    display: block;
+}
+
+.stat-change.positive {
+    color: var(--success);
+}
+
+.stat-change.positive::before {
+    content: "↑ ";
+}
+
+.stat-change.negative {
+    color: var(--danger);
+}
+
+.stat-change.negative::before {
+    content: "↓ ";
+}
+
+.charts-grid {
+    margin-top: 30px;
+}
+
+.chart-placeholder {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.9;
+    }
+}
+
 @media (max-width: 768px) {
     .sidebar {
         transform: translateX(-100%);

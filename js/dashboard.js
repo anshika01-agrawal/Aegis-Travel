@@ -4,7 +4,9 @@
 
 // Initialize Map
 let map;
+let mapFull;
 let markers = [];
+let markersFull = [];
 
 function initMap() {
     // Center of Northeast India (Shillong)
@@ -48,6 +50,53 @@ function initMap() {
         // Animate marker
         setInterval(() => {
             marker.setRadius(marker.getRadius() === 8 ? 12 : 8);
+        }, 1000);
+    });
+}
+
+function initMapFull() {
+    // Center of Northeast India (Shillong)
+    mapFull = L.map('live-map-full').setView([25.5788, 91.8933], 7);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap contributors'
+    }).addTo(mapFull);
+
+    // Sample tourist locations (same as main map)
+    const touristLocations = [
+        { lat: 25.5788, lng: 91.8933, name: 'John Doe', status: 'safe', id: 'TG-2024-1234' },
+        { lat: 26.2006, lng: 92.9376, name: 'Sarah Smith', status: 'warning', id: 'TG-2024-5678' },
+        { lat: 27.3314, lng: 88.6138, name: 'Raj Kumar', status: 'safe', id: 'TG-2024-9012' },
+        { lat: 27.1004, lng: 93.6167, name: 'Lisa Chen', status: 'safe', id: 'TG-2024-3456' },
+        { lat: 26.1584, lng: 91.7698, name: 'David Lee', status: 'danger', id: 'TG-2024-7890' }
+    ];
+
+    // Add markers
+    touristLocations.forEach(location => {
+        const markerColor = location.status === 'safe' ? 'green' : 
+                           location.status === 'warning' ? 'orange' : 'red';
+        
+        const marker = L.circleMarker([location.lat, location.lng], {
+            radius: 10,
+            fillColor: markerColor,
+            color: '#fff',
+            weight: 2,
+            opacity: 1,
+            fillOpacity: 0.8
+        }).addTo(mapFull);
+
+        marker.bindPopup(`
+            <strong>${location.name}</strong><br>
+            ID: ${location.id}<br>
+            Status: ${location.status.toUpperCase()}<br>
+            <button onclick="alert('Tracking ${location.name}')" style="margin-top: 5px; padding: 5px 10px; background: #6366f1; color: white; border: none; border-radius: 4px; cursor: pointer;">Track</button>
+        `);
+
+        markersFull.push(marker);
+
+        // Animate marker
+        setInterval(() => {
+            marker.setRadius(marker.getRadius() === 10 ? 14 : 10);
         }, 1000);
     });
 }
@@ -108,6 +157,13 @@ navItems.forEach(item => {
             const targetSection = document.getElementById('section-' + sectionId);
             if (targetSection) {
                 targetSection.classList.add('active');
+            }
+            
+            // Initialize full map when Live Map section is opened
+            if (sectionId === 'livemap' && !mapFull && document.getElementById('live-map-full')) {
+                setTimeout(() => {
+                    initMapFull();
+                }, 100);
             }
         }
         

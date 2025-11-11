@@ -181,7 +181,7 @@ body {
     padding: 0 30px;
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 1000;
 }
 
 .topbar-left {
@@ -402,6 +402,8 @@ body {
     border-radius: 12px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     overflow: hidden;
+    position: relative;
+    z-index: 1;
 }
 
 .card-header {

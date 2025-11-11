@@ -69,6 +69,53 @@ if (btnMenu) {
     });
 }
 
+// Sidebar Navigation
+const navItems = document.querySelectorAll('.nav-item');
+navItems.forEach(item => {
+    item.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        // Remove active class from all items
+        navItems.forEach(nav => nav.classList.remove('active'));
+        
+        // Add active class to clicked item
+        this.classList.add('active');
+        
+        // Get the section name
+        const sectionName = this.querySelector('span').textContent.trim();
+        
+        // Show notification
+        showSectionNotification(sectionName);
+        
+        // Close mobile sidebar if open
+        if (sidebar) {
+            sidebar.classList.remove('active');
+        }
+        
+        // Scroll to top of dashboard
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+});
+
+// Show section notification
+function showSectionNotification(section) {
+    const messages = {
+        'Dashboard': 'Showing main dashboard overview',
+        'Tourists': 'Loading tourist management panel...',
+        'Alerts': 'Displaying active alerts and notifications',
+        'Live Map': 'Opening live tourist tracking map',
+        'Incidents': 'Loading incident reports and history',
+        'E-FIR': 'Opening E-FIR management system',
+        'Analytics': 'Loading analytics and reports',
+        'Settings': 'Opening system settings'
+    };
+    
+    showNotification(messages[section] || `Opening ${section}...`, 'info');
+    
+    // In production, this would load different content/pages
+    console.log(`Navigating to: ${section}`);
+}
+
 // Real-time Clock
 function updateClock() {
     const now = new Date();

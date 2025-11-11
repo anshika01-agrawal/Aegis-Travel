@@ -349,6 +349,11 @@ body {
 
 .stat-icon.safety-score {
     background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+}
+
+.stat-icon.safety-score i {
+    font-size: 28px;
 }
 
 .stat-icon.response-time {

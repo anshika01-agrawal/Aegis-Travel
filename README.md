@@ -4,6 +4,12 @@
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 ![Status](https://img.shields.io/badge/status-active-success.svg)
 
+## 🌐 Live Demo
+
+**🔗 Live Website:** [https://aegis-travel-nsjf.vercel.app/](https://aegis-travel-nsjf.vercel.app/)
+
+---
+
 ## 📋 Project Overview
 
 **Aegis Travel** is a revolutionary Smart Tourist Safety Monitoring & Incident Response System that leverages AI, Blockchain, and Geo-Fencing technologies to ensure the safety of tourists in remote and high-risk areas. Designed specifically for regions like Northeast India, this comprehensive platform provides real-time monitoring, rapid emergency response, and secure identity verification.

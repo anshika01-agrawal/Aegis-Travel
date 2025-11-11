@@ -2,41 +2,6 @@
 // ADMIN DASHBOARD JAVASCRIPT
 // ===================================
 
-// Real-time Clock
-function updateClock() {
-    const now = new Date();
-    
-    // Format time as HH:MM:SS
-    const hours = String(now.getHours()).padStart(2, '0');
-    const minutes = String(now.getMinutes()).padStart(2, '0');
-    const seconds = String(now.getSeconds()).padStart(2, '0');
-    const timeString = `${hours}:${minutes}:${seconds}`;
-    
-    // Update time display
-    const timeElement = document.getElementById('current-time');
-    if (timeElement) {
-        timeElement.textContent = timeString;
-    }
-    
-    // Get timezone info
-    const timezoneOffset = -now.getTimezoneOffset();
-    const offsetHours = Math.floor(Math.abs(timezoneOffset) / 60);
-    const offsetMinutes = Math.abs(timezoneOffset) % 60;
-    const offsetSign = timezoneOffset >= 0 ? '+' : '-';
-    const timezoneString = `IST (UTC${offsetSign}${offsetHours}:${String(offsetMinutes).padStart(2, '0')})`;
-    
-    // Update timezone display
-    const timezoneElement = document.getElementById('current-timezone');
-    if (timezoneElement) {
-        timezoneElement.textContent = timezoneString;
-    }
-}
-
-// Update clock every second
-setInterval(updateClock, 1000);
-// Initial call
-updateClock();
-
 // Initialize Map
 let map;
 let mapFull;

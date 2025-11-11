@@ -214,57 +214,6 @@ body {
     gap: 25px;
 }
 
-/* Real-time Clock */
-.real-time-clock {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    padding: 8px 16px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
-}
-
-.clock-display {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    color: var(--white);
-}
-
-.clock-display i {
-    font-size: 16px;
-    animation: pulse-clock 2s infinite;
-}
-
-@keyframes pulse-clock {
-    0%, 100% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0.7;
-    }
-}
-
-.clock-display span {
-    font-size: 18px;
-    font-weight: 700;
-    font-family: 'Courier New', monospace;
-    letter-spacing: 1px;
-}
-
-.timezone-display {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    color: rgba(255, 255, 255, 0.9);
-    font-size: 11px;
-}
-
-.timezone-display i {
-    font-size: 12px;
-}
-
 .search-box {
     display: flex;
     align-items: center;
@@ -1323,18 +1272,6 @@ input:checked + .slider:before {
     
     .search-box {
         display: none;
-    }
-    
-    .real-time-clock {
-        padding: 6px 12px;
-    }
-    
-    .clock-display span {
-        font-size: 14px;
-    }
-    
-    .timezone-display {
-        font-size: 10px;
     }
     
     .stats-grid {

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourist Login - Aegis Travel</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-left">
+            <div class="login-branding">
+                <a href="index.html" class="back-home">
+                    <i class="fas fa-arrow-left"></i> Back to Home
+                </a>
+                <div class="brand-logo">
+                    <i class="fas fa-shield-alt"></i>
+                    <h1>Aegis Travel</h1>
+                </div>
+                <p class="brand-tagline">Your Safety, Our Priority</p>
+            </div>
+            
+            <div class="login-features">
+                <div class="feature-item">
+                    <i class="fas fa-shield-check"></i>
+                    <span>Real-time Safety Monitoring</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-bell"></i>
+                    <span>Instant Emergency Alerts</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-fingerprint"></i>
+                    <span>Blockchain Digital ID</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="login-right">
+            <div class="login-form-container">
+                <h2>Tourist Login</h2>
+                <p>Access your safety dashboard</p>
+                
+                <form class="login-form" id="touristLoginForm">
+                    <div class="form-group">
+                        <label for="touristId">Tourist ID</label>
+                        <div class="input-group">
+                            <i class="fas fa-id-card"></i>
+                            <input type="text" id="touristId" placeholder="TG-2024-XXXX" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Password / PIN</label>
+                        <div class="input-group">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" id="password" placeholder="Enter your password" required>
+                            <button type="button" class="toggle-password">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="form-options">
+                        <label class="checkbox">
+                            <input type="checkbox">
+                            <span>Remember me</span>
+                        </label>
+                        <a href="#" class="forgot-link">Forgot Password?</a>
+                    </div>
+                    
+                    <button type="submit" class="btn-login">
+                        <i class="fas fa-sign-in-alt"></i>
+                        Login to Dashboard
+                    </button>
+                </form>
+                
+                <div class="divider">
+                    <span>OR</span>
+                </div>
+                
+                <div class="alternative-login">
+                    <button class="btn-alt">
+                        <i class="fas fa-fingerprint"></i>
+                        Login with Biometric
+                    </button>
+                    <button class="btn-alt">
+                        <i class="fas fa-qrcode"></i>
+                        Scan QR Code
+                    </button>
+                </div>
+                
+                <div class="register-prompt">
+                    <p>New tourist? <a href="#">Register for Digital ID</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/login.js"></script>
+</body>
+</html>

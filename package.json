@@ -1,0 +1,22 @@
+{
+  "name": "aegis-travel",
+  "version": "1.0.0",
+  "description": "Smart Tourist Safety Monitoring & Incident Response System using AI, Geo-Fencing, and Blockchain-based Digital ID",
+  "main": "index.html",
+  "scripts": {
+    "dev": "live-server --port=3000",
+    "build": "echo 'Build complete'"
+  },
+  "keywords": [
+    "tourist-safety",
+    "blockchain",
+    "AI",
+    "geo-fencing",
+    "travel-security"
+  ],
+  "author": "Anshika Agrawal",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}

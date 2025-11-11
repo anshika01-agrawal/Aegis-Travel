@@ -84,6 +84,33 @@ navItems.forEach(item => {
         // Get the section name
         const sectionName = this.querySelector('span').textContent.trim();
         
+        // Map section names to IDs
+        const sectionMap = {
+            'Dashboard': 'dashboard',
+            'Tourists': 'tourists',
+            'Alerts': 'alerts',
+            'Live Map': 'livemap',
+            'Incidents': 'incidents',
+            'E-FIR': 'efir',
+            'Analytics': 'analytics',
+            'Settings': 'settings'
+        };
+        
+        const sectionId = sectionMap[sectionName];
+        
+        if (sectionId) {
+            // Hide all sections
+            document.querySelectorAll('.dashboard-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Show selected section
+            const targetSection = document.getElementById('section-' + sectionId);
+            if (targetSection) {
+                targetSection.classList.add('active');
+            }
+        }
+        
         // Show notification
         showSectionNotification(sectionName);
         

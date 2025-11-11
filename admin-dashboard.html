@@ -96,6 +96,9 @@
 
         <!-- Dashboard Content -->
         <div class="dashboard-container">
+            
+            <!-- Dashboard Section (Default) -->
+            <div id="section-dashboard" class="dashboard-section active">
             <!-- Stats Cards -->
             <div class="stats-grid">
                 <div class="stat-card">
@@ -414,6 +417,185 @@
                     </div>
                 </div>
             </div>
+            </div>
+            <!-- End Dashboard Section -->
+
+            <!-- Tourists Section -->
+            <div id="section-tourists" class="dashboard-section">
+                <div class="section-header-bar">
+                    <h2><i class="fas fa-users"></i> Tourist Management</h2>
+                    <button class="btn-primary"><i class="fas fa-plus"></i> Add New Tourist</button>
+                </div>
+                
+                <div class="tourists-analytics-grid" style="grid-template-columns: 1fr;">
+                    <div class="card tourists-card">
+                        <div class="card-header">
+                            <h2><i class="fas fa-users"></i> All Tourists</h2>
+                            <div class="card-actions">
+                                <button class="btn-icon"><i class="fas fa-filter"></i></button>
+                                <button class="btn-icon"><i class="fas fa-download"></i></button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <table class="tourists-table">
+                                <thead>
+                                    <tr>
+                                        <th>Tourist ID</th>
+                                        <th>Name</th>
+                                        <th>Location</th>
+                                        <th>Safety Score</th>
+                                        <th>Status</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>TG-2024-1234</td>
+                                        <td>
+                                            <div class="tourist-info">
+                                                <img src="https://ui-avatars.com/api/?name=John+Doe" alt="Tourist">
+                                                <span>John Doe</span>
+                                            </div>
+                                        </td>
+                                        <td>Shillong, Meghalaya</td>
+                                        <td><div class="score-badge high">98</div></td>
+                                        <td><span class="status-badge active">Active</span></td>
+                                        <td>
+                                            <button class="btn-icon"><i class="fas fa-eye"></i></button>
+                                            <button class="btn-icon"><i class="fas fa-edit"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>TG-2024-5678</td>
+                                        <td>
+                                            <div class="tourist-info">
+                                                <img src="https://ui-avatars.com/api/?name=Sarah+Smith" alt="Tourist">
+                                                <span>Sarah Smith</span>
+                                            </div>
+                                        </td>
+                                        <td>Kaziranga, Assam</td>
+                                        <td><div class="score-badge medium">75</div></td>
+                                        <td><span class="status-badge alert">Alert</span></td>
+                                        <td>
+                                            <button class="btn-icon"><i class="fas fa-eye"></i></button>
+                                            <button class="btn-icon"><i class="fas fa-edit"></i></button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Tourists Section -->
+
+            <!-- Alerts Section -->
+            <div id="section-alerts" class="dashboard-section">
+                <div class="section-header-bar">
+                    <h2><i class="fas fa-bell"></i> Alert Management</h2>
+                    <button class="btn-primary"><i class="fas fa-check-circle"></i> Resolve All</button>
+                </div>
+                
+                <div class="alerts-full-view">
+                    <div class="card">
+                        <div class="card-header">
+                            <h2><i class="fas fa-exclamation-triangle"></i> Active Alerts (12)</h2>
+                        </div>
+                        <div class="card-body">
+                            <div class="alert-list">
+                                <div class="alert-item critical">
+                                    <div class="alert-icon"><i class="fas fa-exclamation-circle"></i></div>
+                                    <div class="alert-content">
+                                        <h4>Panic Button Activated</h4>
+                                        <p>Tourist ID: TG-2024-1234 | Location: Dense Forest, Shillong</p>
+                                        <span class="alert-time">2 minutes ago</span>
+                                    </div>
+                                    <button class="btn-respond">Emergency Response</button>
+                                </div>
+                                <div class="alert-item high">
+                                    <div class="alert-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                    <div class="alert-content">
+                                        <h4>Geo-Fence Violation</h4>
+                                        <p>Tourist ID: TG-2024-5678 | Entered restricted zone</p>
+                                        <span class="alert-time">5 minutes ago</span>
+                                    </div>
+                                    <button class="btn-respond">Investigate</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Alerts Section -->
+
+            <!-- Settings Section -->
+            <div id="section-settings" class="dashboard-section">
+                <div class="section-header-bar">
+                    <h2><i class="fas fa-cog"></i> System Settings</h2>
+                </div>
+                
+                <div class="settings-grid">
+                    <div class="card">
+                        <div class="card-header">
+                            <h2><i class="fas fa-user-shield"></i> Account Settings</h2>
+                        </div>
+                        <div class="card-body">
+                            <div class="settings-form">
+                                <div class="form-group">
+                                    <label>Admin Name</label>
+                                    <input type="text" value="Admin User" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label>Email</label>
+                                    <input type="email" value="admin@aegistravel.com" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label>Department</label>
+                                    <select class="form-control">
+                                        <option>Tourism Department</option>
+                                        <option>Police Department</option>
+                                        <option>Emergency Services</option>
+                                    </select>
+                                </div>
+                                <button class="btn-primary">Save Changes</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <h2><i class="fas fa-bell"></i> Notification Settings</h2>
+                        </div>
+                        <div class="card-body">
+                            <div class="settings-toggles">
+                                <div class="toggle-item">
+                                    <span>Email Notifications</span>
+                                    <label class="switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider"></span>
+                                    </label>
+                                </div>
+                                <div class="toggle-item">
+                                    <span>SMS Alerts</span>
+                                    <label class="switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider"></span>
+                                    </label>
+                                </div>
+                                <div class="toggle-item">
+                                    <span>Push Notifications</span>
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <span class="slider"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Settings Section -->
+
         </div>
     </div>
 
